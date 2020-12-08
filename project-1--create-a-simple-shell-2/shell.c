@@ -150,7 +150,14 @@ int main() {
           }
         }
         else if (strcmp(arguments[0],"setenv")== 0){
-          setenv(arguments[1], arguments[2], 1);//to overwrite
+          char *char_str = arguments[1];
+          const char *string_arr[2];
+          j = 0;
+          string_arr[j] = strtok(char_str,"=");//tokenize 
+          while (string_arr[j] != NULL){
+            string_arr[++j] = strtok(NULL,"=");
+          }
+          //setenv(arguments[2], arguments[1], 1);//overwrite setenv?
         }
         else if (strcmp(arguments[0],"cd")== 0){
           chdir(arguments[1]);
