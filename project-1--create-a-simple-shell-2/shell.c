@@ -157,7 +157,7 @@ int main() {
           while (string_arr[j] != NULL){
             string_arr[++j] = strtok(NULL,"=");
           }
-          //setenv(arguments[2], arguments[1], 1);//overwrite setenv?
+          setenv(string_arr[0], string_arr[1], 1);//overwrite setenv
         }
         else if (strcmp(arguments[0],"cd")== 0){
           chdir(arguments[1]);
