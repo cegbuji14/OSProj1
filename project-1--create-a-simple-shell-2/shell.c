@@ -196,7 +196,7 @@ int main() {
         // man dup2
         // man open
         // man pipes
-    }
+    }//worked with Spencer
     // This should never be reached.
     return -1;
 }
